@@ -1,0 +1,1 @@
+mvn deploy -Dregistry=https://maven.pkg.github.com/testzdorov -Dtoken=GH_TOKEN
