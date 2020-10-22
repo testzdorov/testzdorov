@@ -46,15 +46,15 @@ $(function()
                             s_tpl = s_tpl.replace("{SYSTEM_VALUE}", system_value);
                             s_tpl = s_tpl.replace("{RU_VALUE}", ru_system_values[system_value]);
 
-                            //console.log(system.name);
-                            //console.log("cell_value: " + cell_value);
-                            //console.log("var res = " + cell_value + system.values[system_value] + ";");
-                            //console.log(res);
+                            console.log(system.name);
+                            console.log("cell_value: " + cell_value);
+                            console.log("var res = " + cell_value + system.values[system_value] + ";");
+                            console.log(res);
                             break;
                         }
                     }
 
-                    var product_link = "&nbsp; <a href='/catalog?category_id=bad&category%5B%5D=" + system.category + "' class='products_link' target='_blank'>продукция</a>";
+                    //var product_link = "&nbsp; <a href='/catalog?category_id=bad&category%5B%5D=" + system.category + "' class='products_link' target='_blank'>продукция</a>";
 
                     s_tpl = s_tpl.replace("{NAME}", system.name);
                     s_tpl = s_tpl.replace("{TEXT}", system.description);
