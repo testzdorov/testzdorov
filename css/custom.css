@@ -1,0 +1,97 @@
+.auto-style > p a,
+.auto-style > ul a,
+.auto-style > table tbody tr td a {
+  color: #86c400;
+}
+.auto-style > p a:hover {
+  color: #86c400;
+  text-decoration: underline;
+}
+.auto-style > ul {
+  padding: 0 0 0 20px;
+  list-style-type: circle;
+}
+.auto-style > ol {
+  padding: 0 0 0 20px;
+  list-style-type: decimal;
+}
+.auto-style > p strong,
+.auto-style > ul strong,
+.auto-style > table tbody tr td strong {
+  font-weight: bolder;
+  color: #86c400;
+}
+.auto-style > p em,
+.auto-style > table tbody tr td em {
+  font-style: italic;
+}
+.auto-style > h3 {
+  margin: 20px 0 0 0;
+}
+.auto-style > h2 {
+  margin: 20px 0 0 0;
+}
+.auto-style > table tbody tr td {
+  padding: 4px 4px 4px 4px;
+  vertical-align: top;
+  border: 1px solid silver;
+}
+.auto-style > table.noborder tbody tr td {
+  border: 0px;
+}
+.auto-style > table tbody tr td img {
+  padding: 5px 10px 5px 10px;
+}
+
+.rt_checkbox {
+	height:auto;
+	margin-top:3px;
+}
+
+#da_table {
+    width:100%;
+    border: 1px solid #bebebe;
+	line-height:20px;
+}
+
+.color_td {
+    width: 30px !important;
+    height: 21px !important;
+    cursor: pointer;
+    padding:0px !important;
+}
+
+.color_td.selected {
+    background-image: url(../img/cross.png);
+    background-repeat: no-repeat;
+    background-position: 7px 2px;
+}
+
+.checkbox_td {
+    width: 24px;
+    text-align: center;
+}
+
+.label_td {
+    padding-left: 10px;
+}
+
+.border_div {
+    width: 608px !important;
+    height: 96px !important;
+    background-position:0px 35px;
+    padding-top: 15px;
+    font-family: 'tahoma';
+    font-size: 9pt;
+    background-repeat:no-repeat;
+    padding-left: 15px;
+    padding-right:10px !important;
+}
+
+.square_div {
+    width: 25px;
+    height: 16px;
+    float:left;
+    background-repeat: no-repeat;
+}
+
