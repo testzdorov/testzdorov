@@ -2945,20 +2945,7 @@ em {
 .b-currency h2 {
   margin: 0 0 17px;
 }
-.b-currency:before {
-  display: block;
-  content: '';
-  background: url(http://natr.ru/uploads/image/a5f83079694dbbe198726c1257e1cab2.png) no-repeat 0 0;
-  width: 160px;
-  height: 134px;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  position: absolute;
-  top: 30px;
-  right: 10px;
-}
+
 .b-currency__table {
   width: auto;
   margin: 0 0 40px;
