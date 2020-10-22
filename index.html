@@ -845,7 +845,23 @@ var csrfToken = '203051c688f85886bbd80fa1ca46eb4c811464b1';
     <tr>
         <td>
             <br>
-            <img src="img/button.png" id="result_button" border="0" style="cursor:pointer">    
+            <!--<img src="img/button.png" id="result_button" border="0" style="cursor:pointer">-->
+			<button id='newButton'>Отправить данные</button>
+
+		<script>
+		const newButton = document.getElementById('newButton');
+
+		function sendEmail(){
+			window.open('mailto:test@example.com?subject=subject&body='+document.getElementById("da_table"));
+			//document.getElementById("da_table").href="mailto:mail@mail.ru?subject=130000027&body=1"; 
+		}
+
+		newButton.addEventListener('click', sendEmail);
+		</script>
+		
+		
+		<a href="#" id="da_table">Mail me</a>
+
         </td>
     </tr>
     <tr>

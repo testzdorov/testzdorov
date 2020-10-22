@@ -60,12 +60,12 @@ $(function()
                     s_tpl = s_tpl.replace("{TEXT}", system.description);
                     s_tpl = s_tpl.replace("{ICON}", system.icon);
                     s_tpl = s_tpl.replace("{SYSTEM_ID}", system.id);
-                    s_tpl = s_tpl.replace("{PRODUCT_LINK}", product_link);
+                    //s_tpl = s_tpl.replace("{PRODUCT_LINK}", product_link);
 
                     templates_td.append(s_tpl);
                 }
 
-                initProductsLinks();
+                //initProductsLinks();
 
                 location.href="#result";
             });
@@ -177,7 +177,7 @@ var ru_system_values = {
 }
 
 
-function initProductsLinks()
+/*function initProductsLinks()
 {
     var system_products_div = $(".system_products_div");
-}
+}*/
