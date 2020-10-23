@@ -9,6 +9,39 @@
 <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="js/jquery.formstyler.min.js"></script>
 
+<script type="text/javascript" src="jquery.js">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".newButton").click(function(){
+       $.ajax({
+		  type: "POST",
+		  url: "https://mandrillapp.com/api/1.0/messages/send.json",
+		  data: {
+			'key': 'ebfe0d210839631710fd3094aaa0cc3c-us2',
+			'message': {
+			  'from_email': 'artemveremeenko123@gmail.com',
+			  'to': [
+				  {
+					'email': 'artemveremeenko123@gmail.com',
+					'name': '',
+					'type': 'to'
+				  }
+				],
+			  'autotext': 'true',
+			  'subject': 'YOUR SUBJECT HERE!',
+			  'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+			}
+		  }
+		}).done(function(response) {
+		   console.log(response); // if you're into that sorta thing
+		});
+    });
+});
+</script>
+
 <title>Тестирование всех систем организма</title>
 </head>
 
@@ -847,22 +880,20 @@ var csrfToken = '203051c688f85886bbd80fa1ca46eb4c811464b1';
             <br>
             <!--<img src="img/button.png" id="result_button" border="0" style="cursor:pointer">-->
 			<button id='newButton'>Отправить данные</button>
+			
+			
+			
 
-		<script>
+		<!--<script>
 		const newButton = document.getElementById('newButton');
 
 		function sendEmail(){
 			window.open('mailto:test@example.com?subject=subject&body='+document.getElementById("da_table"));
-			//window.open('mailto:test@example.com?subject=subject&body='+document.querySelector(".da_table").innerHTML());
-			//document.getElementById("da_table").href="mailto:mail@mail.ru?subject=130000027&body=1"; 
 			//alert(document.getElementById("da_table").innerHTML)
 		}
 
 		newButton.addEventListener('click', sendEmail);
-		</script>
-		
-		
-		<!--<a href="#" id="da_table">Mail me</a>-->
+		</script>-->
 
         </td>
     </tr>
