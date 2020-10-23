@@ -853,14 +853,16 @@ var csrfToken = '203051c688f85886bbd80fa1ca46eb4c811464b1';
 
 		function sendEmail(){
 			window.open('mailto:test@example.com?subject=subject&body='+document.getElementById("da_table"));
+			//window.open('mailto:test@example.com?subject=subject&body='+document.querySelector(".da_table").innerHTML());
 			//document.getElementById("da_table").href="mailto:mail@mail.ru?subject=130000027&body=1"; 
+			//alert(document.getElementById("da_table").innerHTML)
 		}
 
 		newButton.addEventListener('click', sendEmail);
 		</script>
 		
 		
-		<a href="#" id="da_table">Mail me</a>
+		<!--<a href="#" id="da_table">Mail me</a>-->
 
         </td>
     </tr>
