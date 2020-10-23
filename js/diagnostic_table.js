@@ -9,69 +9,7 @@ $(function()
         $(this).attr("checked", false);
     });
 
-    $.post
-    (
-        "/diagnostic_table/data",
-        {'YUPE_TOKEN':csrfToken},
-        function(result)
-        {
-        	var systems = result.data;
-            color_td.each(function()
-            {
-                var cell = parseInt($(this).attr("cell"));
-                var msg = systems[cell-1].name;
 
-                $(this).bt(msg, {
-                    positions: 'top',
-                    fill: 'white'
-                });
-            })
-
-            $("#result_button").click(function()
-            {
-                templates_td.html("");
-
-                for (cell in cell_values)
-                {
-                    var s_tpl      = $("#s_tpl").html();
-                    var cell_value = cell_values[cell];
-                    var system     = systems[cell-1];
-
-                    for (system_value in system.values)
-                    {
-                        eval("var res = " + cell_value + system.values[system_value] + ";");
-
-                        if (res)
-                        {
-                            s_tpl = s_tpl.replace("{SYSTEM_VALUE}", system_value);
-                            s_tpl = s_tpl.replace("{RU_VALUE}", ru_system_values[system_value]);
-
-                            console.log(system.name);
-                            console.log("cell_value: " + cell_value);
-                            console.log("var res = " + cell_value + system.values[system_value] + ";");
-                            console.log(res);
-                            break;
-                        }
-                    }
-
-                    //var product_link = "&nbsp; <a href='/catalog?category_id=bad&category%5B%5D=" + system.category + "' class='products_link' target='_blank'>продукция</a>";
-
-                    s_tpl = s_tpl.replace("{NAME}", system.name);
-                    s_tpl = s_tpl.replace("{TEXT}", system.description);
-                    s_tpl = s_tpl.replace("{ICON}", system.icon);
-                    s_tpl = s_tpl.replace("{SYSTEM_ID}", system.id);
-                    //s_tpl = s_tpl.replace("{PRODUCT_LINK}", product_link);
-
-                    templates_td.append(s_tpl);
-                }
-
-                //initProductsLinks();
-
-                location.href="#result";
-            });
-        },
-        "json"
-    );
 
     for (var i = 1; i <= 9; i++)
     {
